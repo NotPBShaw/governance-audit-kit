@@ -1,5 +1,7 @@
 # ai-governance-audit-kit
 
+![CI](https://github.com/TryKosm/ai-governance-audit-kit/actions/workflows/ci.yml/badge.svg)
+
 Audit, policy, and risk scoring toolkit for AI governance workflows.
 
 [![CI](https://github.com/TryKosm/ai-governance-audit-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/TryKosm/ai-governance-audit-kit/actions/workflows/ci.yml)
