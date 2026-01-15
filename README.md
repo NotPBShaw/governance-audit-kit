@@ -1,10 +1,12 @@
-# ai-governance-audit-kit
+# Governance Audit Kit
 
-![CI](https://github.com/TryKosm/ai-governance-audit-kit/actions/workflows/ci.yml/badge.svg)
+Audit, policy, and risk scoring for AI governance.
+
+![CI](https://github.com/TryKosm/governance-audit-kit/actions/workflows/ci.yml/badge.svg)
 
 Audit, policy, and risk scoring toolkit for AI governance workflows.
 
-[![CI](https://github.com/TryKosm/ai-governance-audit-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/TryKosm/ai-governance-audit-kit/actions/workflows/ci.yml)
+[![CI](https://github.com/TryKosm/governance-audit-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/TryKosm/governance-audit-kit/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Why this exists

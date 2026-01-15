@@ -3,6 +3,6 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ai-governance-audit-kit"
+name = "governance-audit-kit"
 version = "0.1.0"
 requires-python = ">=3.10"
