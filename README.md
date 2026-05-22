@@ -1,41 +1,51 @@
 # Governance Audit Kit
 
-Audit, policy, and risk scoring for AI governance.
+Audit, policy, and risk scoring for AI governance workflows.
 
-![CI](https://github.com/TryKosm/governance-audit-kit/actions/workflows/ci.yml/badge.svg)
-
-Audit, policy, and risk scoring toolkit for AI governance workflows.
-
-[![CI](https://github.com/TryKosm/governance-audit-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/TryKosm/governance-audit-kit/actions/workflows/ci.yml)
+[![CI](https://github.com/NotPBShaw/governance-audit-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/NotPBShaw/governance-audit-kit/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+Score audit events against policy rules, compute risk, and export a structured report.
 
 ## Why this exists
 
-Open-source building block for production AI workflows.
+Governance tooling often lives in proprietary dashboards. This kit provides composable primitives — policy checks, risk scoring, and report generation — that integrate into CI pipelines or agent runtimes.
 
 ## Quickstart
 
-
-tbd
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e .
+python -c "from audit_kit.cli import run; from pathlib import Path; run(Path('report.json'))"
+cat report.json
+```
 
 ## Usage
 
-Add a concise runnable example for the main workflow in this repository.
+Load events from `examples/events.json` and evaluate policy + risk:
+
+```python
+from audit_kit.models import AuditEvent
+from audit_kit.policy import check_policy
+from audit_kit.risk import risk_score
+
+event = AuditEvent("e-1", "admin-user", "export_summary", "2026-02-05T10:00:00Z")
+print(check_policy(event), risk_score(event))
+```
 
 ## Architecture
 
-Document the core components and data flow for this project.
-
-## Roadmap
-
-- [ ] Stabilize v0.1 contract and improve docs
-- [ ] Expand test coverage and CI signals
-- [ ] Add one benchmark or reliability metric
+- `policy.py` — allow/deny decisions on audit events
+- `risk.py` — numeric risk scoring for flagged actions
+- `reporter.py` — JSON report output
+- `trail.py` — event trail formatting helpers
 
 ## Development
 
-- Run tests locally before opening a PR.
-- Keep changes scoped and update docs for API/behavior changes.
+```bash
+make check
+pytest -q
+```
 
 ## License
 
